@@ -11,9 +11,15 @@
  
   <!-- HANDLEBARS TEMPLATE -->
   <script id="animalTemplate" type="text/x-handlebars-template">
-    <ul>
-      <li class="animal">{{type}} says {{sound}}</li>
-    </ul>
+    {{#if animals}}
+      <ul>
+        {{#each animals}} // could also use {{#animals}}
+          <li class="animal">{{type}} says {{sound}}</li>
+        {{/each}} // if use {{#animals}}, close with {{/animals}}
+      </ul>
+    {{else}}
+      <p>There are no animals.</p>
+    {{/if}}
   </script>
  
   <!-- REQUIRE HANDLEBARS -->

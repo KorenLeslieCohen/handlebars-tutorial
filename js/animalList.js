@@ -7,7 +7,11 @@ var source = document.getElementById("animalTemplate").innerHTML;
 var template = Handlebars.compile(source);
 
 // data
-var data = {type: "Dog", sound: "woof"};
+var data = {animals: [
+  {type: "Dog", sound: "woof"},
+  {type: "Cat", sound: "meow"},
+  {type: "Cow", sound: "moo"}
+]};
 
 // data is passed to above template
 var output = template(data);
@@ -19,6 +23,10 @@ document.getElementById("animalList").innerHTML = output;
 
 // var source = $("#animalTemplate").html();
 // var template = Handlebars.compile(source);
-// var data = {type: "Dog", sound: "woof"};
+// var data = {animals: [
+//   {type: "Dog", sound: "woof"},
+//   {type: "Cat", sound: "meow"},
+//   {type: "Cow", sound: "moo"}
+// ]};
 // $("#animalList").html(template(data));
 
