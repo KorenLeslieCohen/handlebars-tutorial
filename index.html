@@ -13,18 +13,22 @@
   <script id="animalTemplate" type="text/x-handlebars-template">
     {{#if animals}}
       <ul>
-        {{#each animals}} // could also use {{#animals}}
+        {{#each animals}} 
           <li class="animal">{{type}} says {{sound}}</li>
-        {{/each}} // if use {{#animals}}, close with {{/animals}}
+        {{/each}} 
       </ul>
     {{else}}
       <p>There are no animals.</p>
     {{/if}}
+
+    <p>{{helper}}</p>
+    <p>{{multiply 7 16}}</p>
   </script>
  
   <!-- REQUIRE HANDLEBARS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="js/handlebars.js"></script>
+  <script src="js/helpers.js"></script>
 
   <!-- RENDER TEMPLATE AFTER EVERYTHING ELSE LOADED -->
   <script src="js/animalList.js"></script>

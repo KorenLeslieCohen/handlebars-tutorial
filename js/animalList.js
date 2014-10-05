@@ -29,4 +29,3 @@ document.getElementById("animalList").innerHTML = output;
 //   {type: "Cow", sound: "moo"}
 // ]};
 // $("#animalList").html(template(data));
-
