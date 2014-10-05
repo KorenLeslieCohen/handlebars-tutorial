@@ -1,0 +1,26 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Handlebars.js Tutorial</title>
+</head>
+<body>
+
+  <h1>List of Animals and Sounds</h1>
+  <div id="animalList">
+  </div>
+ 
+  <!-- HANDLEBARS TEMPLATE -->
+  <script id="animalTemplate" type="text/x-handlebars-template">
+    <ul>
+      <li class="animal">{{type}} says {{sound}}</li>
+    </ul>
+  </script>
+ 
+  <!-- MUST BE CALLED AFTER THE TEMPLATE, OTHERWISE ERROR -->
+  <script src="js/handlebars.js"></script>
+
+  <!-- RENDER TEMPLATE AFTER EVERYTHING ELSE LOADED -->
+  <script src="js/animalList.js"></script>
+ 
+</body>
+</html>
